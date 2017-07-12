@@ -1,0 +1,20 @@
+{
+    "name": "btccom/ezbitcoind-php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruben de Vries",
+            "email": "ruben@rubensayshi.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Btccom\\BitcoindRPC\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "nbobtc/bitcoind-php": "^2.0"
+    }
+}
