@@ -263,6 +263,12 @@ class BitcoindRPC
         return $this->handleResponse($response);
     }
 
+    public function invalidateBlock($hash)
+    {
+        $response = $this->client->sendCommand(new Command('invalidateblock', $hash));
+        return $this->handleResponse($response);
+    }
+
     /**
      * NOTE: Must run walletPassphrase method before this
      *
