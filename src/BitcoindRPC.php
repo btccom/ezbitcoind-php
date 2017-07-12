@@ -173,6 +173,12 @@ class BitcoindRPC
         return $this->handleResponse($response);
     }
 
+    public function generate($nblocks)
+    {
+        $response = $this->client->sendCommand(new Command('generate', $nblocks));
+        return $this->handleResponse($response);
+    }
+
     public function getHashesPerSec()
     {
         $response = $this->client->sendCommand(new Command('gethasespersec'));
